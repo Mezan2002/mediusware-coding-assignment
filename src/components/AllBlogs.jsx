@@ -4,14 +4,10 @@ import { useEffect, useState } from "react";
 const AllBlogs = () => {
 
   const [blogs, setBlogs] = useState([]);
-  const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  console.log("blogs", blogs);
-  console.log("categories", categories);
-
-
+  
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -80,14 +76,9 @@ const AllBlogs = () => {
           <button className="text-lg font-medium text-white py-3 px-6 bg-primary-3 rounded-xl">
             All
           </button>
-          {
-            categories.map(category => (
-              <button className="text-lg font-medium py-3 px-6 text-gray-7 bg-white rounded-xl border border-border-2">
-                {category.name} <span className="py-1 px-2 bg-gray-200 text-sm font-bold text-gray-7 rounded-[15px] inline-block ml-2">{category.total_blog}</span>
-              </button>
-            ))
-          }
-
+          <button className="text-lg font-medium py-3 px-6 text-gray-7 bg-white rounded-xl border border-border-2">
+            ERP <span className="py-1 px-2 bg-gray-200 text-sm font-bold text-gray-7 rounded-[15px] inline-block ml-2">11</span>
+          </button>
         </div>
         {/* card outer container */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
